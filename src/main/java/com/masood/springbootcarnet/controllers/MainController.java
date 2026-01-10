@@ -16,7 +16,6 @@ public class MainController {
 
         return "home.html";
 
-
     }
 
 }
