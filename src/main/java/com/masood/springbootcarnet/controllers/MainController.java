@@ -2,6 +2,7 @@ package com.masood.springbootcarnet.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -10,8 +11,9 @@ public class MainController {
 
     @RequestMapping("/home")
     public String home(
-            @RequestParam String color,
-            @RequestParam String nationality,
+
+            @RequestParam(required = false) String color,
+            @RequestParam(required = false) String nationality,
             Model page) {
 
 
@@ -22,6 +24,26 @@ public class MainController {
         return "home.html";
 
     }
+
+    @RequestMapping("/home2/{color}")
+    public String home2(
+            @PathVariable String color,
+            Model page
+    ) {
+
+
+        page.addAttribute("name","masood");
+        page.addAttribute("nationality","pakistani");
+
+        page.addAttribute("color",color);
+
+
+
+        return "home.html";
+    }
+
+
+
 
 }
 
