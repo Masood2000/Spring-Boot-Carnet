@@ -3,16 +3,21 @@ package com.masood.springbootcarnet.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
 
     @RequestMapping("/home")
-    public String home(Model page){
+    public String home(
+            @RequestParam String color,
+            @RequestParam String nationality,
+            Model page) {
 
 
         page.addAttribute("name","masood");
-        page.addAttribute("nationality","france");
+        page.addAttribute("nationality",nationality);
+        page.addAttribute("color",color);
 
         return "home.html";
 
