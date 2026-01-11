@@ -1,4 +1,4 @@
-package com.masood.springbootcarnet.controllers;
+package com.masood.springbootcarnet.modules.m_8.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
