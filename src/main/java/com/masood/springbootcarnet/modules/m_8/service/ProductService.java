@@ -13,7 +13,6 @@ public class ProductService {
 
     private List<Product> mProductsList = new ArrayList<>();
 
-
     public void addProduct(Product _product) {
         mProductsList.add(_product);
     }
