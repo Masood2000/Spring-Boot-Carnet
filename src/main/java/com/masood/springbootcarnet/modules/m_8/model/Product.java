@@ -6,8 +6,6 @@ public class Product {
     private double price;
 
 
-
-
     //Getters and Setters
     public String getName() {
         return name;
