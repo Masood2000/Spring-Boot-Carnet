@@ -31,6 +31,7 @@ public class ProductController {
         return "product.html";
     }
 
+
     @PostMapping(path = "/product")
     public String addProduct(
             Product p,
