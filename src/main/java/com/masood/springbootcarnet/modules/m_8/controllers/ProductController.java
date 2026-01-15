@@ -30,6 +30,8 @@ public class ProductController {
 
         return "product.html";
 
+
+
     }
 
     @PostMapping(path = "/product")
