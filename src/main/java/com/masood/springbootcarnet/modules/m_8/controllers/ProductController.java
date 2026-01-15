@@ -29,6 +29,7 @@ public class ProductController {
         page.addAttribute("products", products);
 
         return "product.html";
+
     }
 
     @PostMapping(path = "/product")
