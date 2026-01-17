@@ -34,7 +34,6 @@ public class MainController {
 
         page.addAttribute("username" , username);
 
-
         return "main.html";
     }
 
