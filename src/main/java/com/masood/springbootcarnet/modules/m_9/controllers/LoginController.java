@@ -13,16 +13,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class LoginController {
 
 
-
-    private final LoginProcessor loginProcessor;
+    private final LoginProcessor mLoginProcessor;
 
     @Autowired
     public LoginController(LoginProcessor loginProcessor) {
-        this.loginProcessor = loginProcessor;
+        this.mLoginProcessor = loginProcessor;
     }
 
     @GetMapping(path = "/")
     public String loginGet() {
+
+        System.out.println(mLoginProcessor);
+        System.out.println(mLoginProcessor.mLoggedUserManagementService);
+
         return "login.html";
     }
 
@@ -33,18 +36,20 @@ public class LoginController {
             Model page) {
 
 
-        System.out.println(loginProcessor);
+        System.out.println(mLoginProcessor);
+        System.out.println(mLoginProcessor.mLoggedUserManagementService);
 
         boolean loggedIn = false;
 
         System.out.println(username + password);
-        loginProcessor.setPassword(password);
-        loginProcessor.setUsername(username);
-        loggedIn = loginProcessor.login();
+        mLoginProcessor.setPassword(password);
+        mLoginProcessor.setUsername(username);
+        loggedIn = mLoginProcessor.login();
 
         if (loggedIn) {
-            page.addAttribute("message", "You are now logged in.");
-        } else {
+            return "redirect:/main";
+        }
+        else {
             page.addAttribute("message", "Login failed!");
         }
         return "login.html";
