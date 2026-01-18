@@ -3,7 +3,6 @@ package com.masood.springbootcarnet.modules.m_9.service;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.ApplicationScope;
 
-
 @ApplicationScope
 @Service
 public class LoginCountService {
