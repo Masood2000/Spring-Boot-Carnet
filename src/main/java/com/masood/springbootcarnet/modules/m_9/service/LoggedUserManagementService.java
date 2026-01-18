@@ -8,7 +8,6 @@ public class LoggedUserManagementService {
 
     private String username;
 
-
     public String getUsername() {
         return username;
     }
