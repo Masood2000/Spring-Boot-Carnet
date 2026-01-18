@@ -13,9 +13,9 @@ public class LoginCountService {
         this.loginCount = loginCount;
     }
 
+
     public int getLoginCount() {
         return loginCount;
     }
-
 
 }
