@@ -7,7 +7,6 @@ import org.springframework.web.context.annotation.ApplicationScope;
 @Service
 public class LoginCountService {
 
-
     private int loginCount = 0;
 
     public void setLoginCount(int loginCount) {
