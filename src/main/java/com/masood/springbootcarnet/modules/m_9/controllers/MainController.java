@@ -38,6 +38,7 @@ public class MainController {
             return "redirect:/";
         }
 
+
         page.addAttribute("username" , username);
         page.addAttribute("count" , count);
 
