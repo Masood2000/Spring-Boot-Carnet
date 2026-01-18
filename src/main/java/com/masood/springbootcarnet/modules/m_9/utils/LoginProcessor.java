@@ -2,6 +2,7 @@ package com.masood.springbootcarnet.modules.m_9.utils;
 
 
 import com.masood.springbootcarnet.modules.m_9.service.LoggedUserManagementService;
+import com.masood.springbootcarnet.modules.m_9.service.LoginCountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
@@ -12,11 +13,13 @@ public class LoginProcessor {
 
 
     public final LoggedUserManagementService mLoggedUserManagementService;
+    private final LoginCountService mLoginCountSerive;
 
 
     @Autowired
-    public LoginProcessor(LoggedUserManagementService loggedUserManagementService) {
+    public LoginProcessor(LoggedUserManagementService loggedUserManagementService, LoginCountService loginCountSerive) {
         this.mLoggedUserManagementService = loggedUserManagementService;
+        this.mLoginCountSerive = loginCountSerive;
     }
 
 
@@ -29,9 +32,11 @@ public class LoginProcessor {
 
         boolean loginResult = false;
 
-        if ("masood".equals(username) && "meerab".equals(password)) {
+        if (("masood".equals(username) && "meerab".equals(password))  || ("saud".equals(username) && "nimra".equals(password)) ) {
             loginResult = true;
             mLoggedUserManagementService.setUsername(username);
+            this.mLoginCountSerive.setLoginCount(this.mLoginCountSerive.getLoginCount() + 1);
+
         }
 
         return  loginResult;

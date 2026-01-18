@@ -1,6 +1,7 @@
 package com.masood.springbootcarnet.modules.m_9.controllers;
 
 import com.masood.springbootcarnet.modules.m_9.service.LoggedUserManagementService;
+import com.masood.springbootcarnet.modules.m_9.service.LoginCountService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,8 +13,12 @@ public class MainController {
 
     private final LoggedUserManagementService mLoggedUserManagementService;
 
-    public MainController( LoggedUserManagementService loggedUserManagementService) {
+    private final LoginCountService mLoginCountService;
+
+
+    public MainController( LoggedUserManagementService loggedUserManagementService, LoginCountService loginCountService) {
         this.mLoggedUserManagementService = loggedUserManagementService;
+        this.mLoginCountService = loginCountService;
     }
 
     @GetMapping("/main")
@@ -21,6 +26,8 @@ public class MainController {
             @RequestParam(required = false) String logout,
             Model page
     ) {
+
+        int count = mLoginCountService.getLoginCount();
 
         if (logout != null) {
             mLoggedUserManagementService.setUsername(null);
@@ -32,6 +39,7 @@ public class MainController {
         }
 
         page.addAttribute("username" , username);
+        page.addAttribute("count" , count);
 
         return "main.html";
     }
