@@ -1,6 +1,5 @@
 package com.masood.springbootcarnet.modules.m_9.controllers;
 
-
 import com.masood.springbootcarnet.modules.m_9.service.LoggedUserManagementService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
