@@ -16,6 +16,7 @@ public class LoginProcessor {
     private final LoginCountService mLoginCountSerive;
 
 
+
     @Autowired
     public LoginProcessor(LoggedUserManagementService loggedUserManagementService, LoginCountService loginCountSerive) {
         this.mLoggedUserManagementService = loggedUserManagementService;
