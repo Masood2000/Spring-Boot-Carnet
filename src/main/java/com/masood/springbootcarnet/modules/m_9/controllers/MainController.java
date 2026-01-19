@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MainController {
 
-
     private final LoggedUserManagementService mLoggedUserManagementService;
 
     private final LoginCountService mLoginCountService;

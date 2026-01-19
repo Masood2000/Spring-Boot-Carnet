@@ -20,7 +20,6 @@ public class LoginController {
         this.mLoginProcessor = loginProcessor;
     }
 
-
     @GetMapping(path = "/")
     public String loginGet() {
 
