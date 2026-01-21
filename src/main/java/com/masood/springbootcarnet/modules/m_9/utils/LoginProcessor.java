@@ -30,12 +30,12 @@ public class LoginProcessor {
         boolean loginResult = false;
 
         if (("masood".equals(username) && "meerab".equals(password))  || ("saud".equals(username) && "nimra".equals(password)) ) {
+
             loginResult = true;
             mLoggedUserManagementService.setUsername(username);
             this.mLoginCountSerive.setLoginCount(this.mLoginCountSerive.getLoginCount() + 1);
 
         }
-
 
         return  loginResult;
 
