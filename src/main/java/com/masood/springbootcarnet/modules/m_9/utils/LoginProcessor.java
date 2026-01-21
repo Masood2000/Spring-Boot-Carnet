@@ -11,7 +11,6 @@ import org.springframework.web.context.annotation.RequestScope;
 @RequestScope
 public class LoginProcessor {
 
-
     public final LoggedUserManagementService mLoggedUserManagementService;
     private final LoginCountService mLoginCountSerive;
 
