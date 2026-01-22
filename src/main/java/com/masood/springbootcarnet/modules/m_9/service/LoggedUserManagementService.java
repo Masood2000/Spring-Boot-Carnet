@@ -16,5 +16,4 @@ public class LoggedUserManagementService {
         this.username = username;
     }
 
-
 }
