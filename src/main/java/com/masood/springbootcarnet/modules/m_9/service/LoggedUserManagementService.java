@@ -15,4 +15,5 @@ public class LoggedUserManagementService {
     public void setUsername(String username) {
         this.username = username;
     }
+
 }
