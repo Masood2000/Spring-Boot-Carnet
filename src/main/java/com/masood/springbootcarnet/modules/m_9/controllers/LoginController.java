@@ -35,7 +35,6 @@ public class LoginController {
             @RequestParam String password,
             Model page) {
 
-
         System.out.println(mLoginProcessor);
         System.out.println(mLoginProcessor.mLoggedUserManagementService);
 
