@@ -29,11 +29,9 @@ public class LoginController {
         return "login.html";
     }
 
+
     @PostMapping(path = "/")
-    public String loginPost(
-            @RequestParam String username,
-            @RequestParam String password,
-            Model page) {
+    public String loginPost( @RequestParam String username, @RequestParam String password, Model page) {
 
         System.out.println(mLoginProcessor);
         System.out.println(mLoginProcessor.mLoggedUserManagementService);
