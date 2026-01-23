@@ -14,7 +14,6 @@ public class MainController {
 
     private final LoginCountService mLoginCountService;
 
-
     public MainController( LoggedUserManagementService loggedUserManagementService, LoginCountService loginCountService) {
         this.mLoggedUserManagementService = loggedUserManagementService;
         this.mLoginCountService = loginCountService;
