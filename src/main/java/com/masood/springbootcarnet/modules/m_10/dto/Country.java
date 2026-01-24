@@ -1,5 +1,10 @@
 package com.masood.springbootcarnet.modules.m_10.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Country {
 
     private String name;
