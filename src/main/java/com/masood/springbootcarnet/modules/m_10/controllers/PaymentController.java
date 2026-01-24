@@ -34,5 +34,4 @@ public class PaymentController {
                 .status(HttpStatus.ACCEPTED)
                 .body(nPaymentDetail);
     }
-
 }
