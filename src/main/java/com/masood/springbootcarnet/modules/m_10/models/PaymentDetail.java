@@ -9,6 +9,4 @@ public class PaymentDetail {
 
     private double amount = 1000;
 
-
-
 }
