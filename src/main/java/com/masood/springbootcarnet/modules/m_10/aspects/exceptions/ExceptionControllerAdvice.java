@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ExceptionControllerAdvice {
 
-
     @ExceptionHandler(NotEnoughMoneyException.class)
     public ResponseEntity<ErrorDetail> exceptionNotEnoughMoneyHandler(NotEnoughMoneyException notEnoughMoneyException) {
 
