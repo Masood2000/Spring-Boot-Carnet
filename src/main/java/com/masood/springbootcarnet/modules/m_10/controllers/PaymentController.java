@@ -25,23 +25,12 @@ public class PaymentController {
 
 
     @PostMapping(path="/payment")
-    public ResponseEntity<?> makePayment() {
+    public ResponseEntity<PaymentDetail> makePayment() {
 
-        try{
-            PaymentDetail paymentDetail = this.mPaymentService.processPayment();
-            return ResponseEntity
-                    .status(HttpStatus.ACCEPTED)
-                    .body(paymentDetail);
-
-        } catch (NotEnoughMoneyException neme){
-
-            System.out.println(neme.getMessage());
-            ErrorDetail errorDetail = new ErrorDetail();
-            errorDetail.setMessage("Insufficient Balance");
-            return ResponseEntity
-                    .badRequest()
-                    .body(errorDetail);
-        }
+        PaymentDetail paymentDetail = this.mPaymentService.processPayment();
+        return ResponseEntity
+                .status(HttpStatus.ACCEPTED)
+                .body(paymentDetail);
     }
 
 }

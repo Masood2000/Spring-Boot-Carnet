@@ -5,15 +5,26 @@ import com.masood.springbootcarnet.modules.m_10.exceptions.NotEnoughMoneyExcepti
 import com.masood.springbootcarnet.modules.m_10.models.PaymentDetail;
 import org.springframework.stereotype.Service;
 
+import java.util.Random;
+
 @Service
 public class PaymentService {
 
     public PaymentDetail processPayment() throws NotEnoughMoneyException {
-        //throw new NotEnoughMoneyException();
 
-        PaymentDetail pd = new PaymentDetail();
-        pd.setAmount(500.55);
-        return pd;
+        Random rd = new Random();
+
+        int n = rd.nextInt();
+
+        if(n%2 == 0 ) {
+            PaymentDetail pd = new PaymentDetail();
+            pd.setAmount(500.55);
+            return pd;
+        }
+        else {
+            throw new NotEnoughMoneyException();
+        }
+
     }
 
 
