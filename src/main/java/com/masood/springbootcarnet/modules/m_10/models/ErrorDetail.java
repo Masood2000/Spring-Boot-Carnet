@@ -10,5 +10,4 @@ public class ErrorDetail {
 
     private String message;
 
-
 }
