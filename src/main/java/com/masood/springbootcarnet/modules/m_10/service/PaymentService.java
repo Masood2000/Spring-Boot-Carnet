@@ -22,7 +22,9 @@ public class PaymentService {
             return pd;
         }
         else {
-            throw new NotEnoughMoneyException();
+            NotEnoughMoneyException notEnoughMoneyException = new NotEnoughMoneyException();
+            notEnoughMoneyException.message = "Appended + "+notEnoughMoneyException.message;
+            throw notEnoughMoneyException;
         }
 
     }
