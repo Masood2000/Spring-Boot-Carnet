@@ -15,12 +15,14 @@ public class ExceptionControllerAdvice {
     @ExceptionHandler(NotEnoughMoneyException.class)
     public ResponseEntity<ErrorDetail> exceptionNotEnoughMoneyHandler(NotEnoughMoneyException notEnoughMoneyException) {
 
+
+
        ErrorDetail ed = new ErrorDetail();
        ed.setMessage("Insufficient Balance");
-
        return ResponseEntity
                .badRequest()
-               .header("message",notEnoughMoneyException.getMessage())
+               .header("message",notEnoughMoneyException.message)
+               //.header("message", "CATCH_ALL_WORKS")
                .body(ed);
 
     }

@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 public class PaymentController {
@@ -25,12 +26,13 @@ public class PaymentController {
 
 
     @PostMapping(path="/payment")
-    public ResponseEntity<PaymentDetail> makePayment() {
-
-        PaymentDetail paymentDetail = this.mPaymentService.processPayment();
+    public ResponseEntity<PaymentDetail> makePayment(
+            @RequestBody PaymentDetail paymentDetail
+    ) {
+        PaymentDetail nPaymentDetail = this.mPaymentService.processPayment(paymentDetail.getAmount());
         return ResponseEntity
                 .status(HttpStatus.ACCEPTED)
-                .body(paymentDetail);
+                .body(nPaymentDetail);
     }
 
 }

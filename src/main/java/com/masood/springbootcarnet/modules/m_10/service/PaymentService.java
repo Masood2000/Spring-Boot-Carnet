@@ -10,15 +10,12 @@ import java.util.Random;
 @Service
 public class PaymentService {
 
-    public PaymentDetail processPayment() throws NotEnoughMoneyException {
+    public PaymentDetail processPayment(double amount) throws NotEnoughMoneyException {
 
-        Random rd = new Random();
+        PaymentDetail pd = new PaymentDetail();
 
-        int n = rd.nextInt();
-
-        if(n%2 == 0 ) {
-            PaymentDetail pd = new PaymentDetail();
-            pd.setAmount(500.55);
+        if(pd.getAmount() - amount > 0 ) {
+            pd.setAmount(pd.getAmount() - amount);
             return pd;
         }
         else {

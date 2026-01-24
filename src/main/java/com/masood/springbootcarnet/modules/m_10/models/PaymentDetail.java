@@ -7,6 +7,8 @@ import lombok.Setter;
 @Setter
 public class PaymentDetail {
 
-    private double amount;
+    private double amount = 1000;
+
+
 
 }
