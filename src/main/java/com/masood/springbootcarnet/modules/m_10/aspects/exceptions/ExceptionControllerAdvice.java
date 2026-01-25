@@ -14,6 +14,7 @@ public class ExceptionControllerAdvice {
     @ExceptionHandler(NotEnoughMoneyException.class)
     public ResponseEntity<ErrorDetail> exceptionNotEnoughMoneyHandler(NotEnoughMoneyException notEnoughMoneyException) {
 
+
        ErrorDetail ed = new ErrorDetail();
        ed.setMessage("Insufficient Balance");
        return ResponseEntity
