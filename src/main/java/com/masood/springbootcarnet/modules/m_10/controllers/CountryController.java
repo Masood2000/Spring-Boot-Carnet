@@ -35,7 +35,5 @@ public class CountryController {
                 .body(List.of(france,spain));
     }
 
-
-
 }
 
