@@ -22,7 +22,6 @@ public class PaymentController {
             @RequestHeader String requestId,
             @RequestBody Payment payment
     ) {
-
         logger.info("Received request with ID " + requestId + " ;Payment Amount: " + payment.getAmount());
         payment.setId(UUID.randomUUID().toString()+"masood");
         return ResponseEntity
