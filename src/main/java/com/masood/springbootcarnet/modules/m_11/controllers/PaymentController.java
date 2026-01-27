@@ -30,5 +30,4 @@ public class PaymentController {
                 .body(payment);
 
     }
-
 }
