@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class PurchaseController {
 
@@ -23,10 +25,16 @@ public class PurchaseController {
     @GetMapping(path="/purchase")
     public ResponseEntity<?> getPurchase() {
 
+        long startTime,endTime;
+
+        startTime = System.currentTimeMillis();
+        List<Purchase> purchasesList = this.mPurchaseRepository.getAllPurchases();
+        endTime = System.currentTimeMillis();
+
         return  ResponseEntity
                 .status(HttpStatus.OK)
-                .body(this.mPurchaseRepository.getAllPurchases());
-
+                .header("Time Taken", String.valueOf(endTime-startTime))
+                .body(purchasesList);
 
     }
 
@@ -34,6 +42,7 @@ public class PurchaseController {
     public void insertPurchase(
             @RequestBody Purchase purchase
     ) {
+
 
         this.mPurchaseRepository.insertPurchase(purchase);
 
