@@ -12,5 +12,3 @@ public class Payment {
     private double amount;
 
 }
-
-
