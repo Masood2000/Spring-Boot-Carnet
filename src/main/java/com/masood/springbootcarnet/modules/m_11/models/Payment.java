@@ -1,6 +1,5 @@
 package com.masood.springbootcarnet.modules.m_11.models;
 
-
 import lombok.Getter;
 import lombok.Setter;
 
