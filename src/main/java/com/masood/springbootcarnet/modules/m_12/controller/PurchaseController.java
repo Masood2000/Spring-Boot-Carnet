@@ -42,9 +42,7 @@ public class PurchaseController {
             @RequestBody Purchase purchase
     ) {
 
-
         this.mPurchaseRepository.insertPurchase(purchase);
-
     }
 
 }
