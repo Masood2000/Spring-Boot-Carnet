@@ -13,3 +13,4 @@ public class Purchase {
     private BigDecimal price;
 
 }
+
