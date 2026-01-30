@@ -44,5 +44,4 @@ public class PurchaseController {
 
         this.mPurchaseRepository.insertPurchase(purchase);
     }
-
 }
