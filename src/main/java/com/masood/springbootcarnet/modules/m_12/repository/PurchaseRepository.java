@@ -18,7 +18,6 @@ public class PurchaseRepository {
 
     private final JdbcTemplate mJdbcTemplate;
 
-
     @Autowired
     public PurchaseRepository(JdbcTemplate _jdbcTemplate) {
         this.mJdbcTemplate = _jdbcTemplate;
