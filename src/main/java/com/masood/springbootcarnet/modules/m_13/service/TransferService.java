@@ -36,10 +36,12 @@ public class TransferService {
                 BigDecimal receiverNewAmount = receiver.getAmount().add(amount);
 
                 mAccountRepository.changeAmount(senderId, senderNewAmount);
+                //var k = 10/0; for testing purposes
                 mAccountRepository.changeAmount(receiverId,receiverNewAmount);
             }
 
         }
+
 
     }
 
