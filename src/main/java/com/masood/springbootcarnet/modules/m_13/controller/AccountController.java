@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+//@RestController
 public class AccountController {
 
     private final TransferService mTransferService;
 
-    @Autowired
+    //@Autowired
     public AccountController(TransferService _transferService) {
         this.mTransferService = _transferService;
     }
