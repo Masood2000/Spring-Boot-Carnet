@@ -20,5 +20,5 @@ custom:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521/xe
     username: C##MASOOD
-    password: "*******"
+    password: "******"
     driver-class-name: oracle.jdbc.OracleDriver
