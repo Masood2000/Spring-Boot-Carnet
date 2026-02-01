@@ -22,4 +22,3 @@ custom:
     username: C##MASOOD
     password: "******"
     driver-class-name: oracle.jdbc.OracleDriver
-
