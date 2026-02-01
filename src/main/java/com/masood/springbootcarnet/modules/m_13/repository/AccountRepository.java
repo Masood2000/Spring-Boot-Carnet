@@ -9,12 +9,12 @@ import org.springframework.stereotype.Repository;
 import java.math.BigDecimal;
 import java.util.List;
 
-@Repository
+//@Repository
 public class AccountRepository {
 
     private final JdbcTemplate mJdbcTemplate;
 
-    @Autowired
+    //@Autowired
     public AccountRepository(JdbcTemplate _jdbcTemplate) {
         this.mJdbcTemplate = _jdbcTemplate;
     }

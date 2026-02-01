@@ -16,7 +16,7 @@ public class PurchaseController {
 
     private final PurchaseRepository mPurchaseRepository;
 
-    @Autowired
+    //@Autowired
     public PurchaseController(PurchaseRepository purchaseRepository) {
         this.mPurchaseRepository = purchaseRepository;
     }
