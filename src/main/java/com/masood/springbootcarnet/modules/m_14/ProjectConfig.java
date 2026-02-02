@@ -34,7 +34,6 @@ public class ProjectConfig {
         dataSource.setConnectionTimeout(1000);
 
         System.out.println("Database Object Created Successfully");
-
         return dataSource;
     }
 }
