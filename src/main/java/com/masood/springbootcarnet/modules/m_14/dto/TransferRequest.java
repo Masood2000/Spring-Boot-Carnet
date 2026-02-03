@@ -13,3 +13,4 @@ public class TransferRequest {
     private long receiverAccountId;
     private BigDecimal amount;
 }
+
