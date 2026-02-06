@@ -37,6 +37,5 @@ public class ProjectConfig {
 
         System.out.println("Database Object Created Successfully");
         return dataSource;
-
     }
 }
