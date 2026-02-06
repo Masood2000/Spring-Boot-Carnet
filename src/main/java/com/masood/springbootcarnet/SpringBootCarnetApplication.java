@@ -10,6 +10,7 @@ public class SpringBootCarnetApplication {
 
         SpringApplication.run(SpringBootCarnetApplication.class, args);
 
+
     }
 
 }
