@@ -15,6 +15,3 @@ public class Account {
     private BigDecimal amount;
 
 }
-
-
-
