@@ -21,7 +21,6 @@ public class ProjectConfig {
     @Value("${custom.datasource.driver-class-name}")
     private String driverClassName;
 
-
     @Bean
     public DataSource dataSource() {
 
