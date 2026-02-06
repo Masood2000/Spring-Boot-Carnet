@@ -5,7 +5,6 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import java.math.BigDecimal;
 
-
 @Getter
 @Setter
 public class Account {
