@@ -6,7 +6,6 @@ import com.masood.springbootcarnet.modules.m_14.service.TransferService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-
 @RestController
 public class AccountController {
 
