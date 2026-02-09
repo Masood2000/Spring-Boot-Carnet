@@ -11,17 +11,17 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.util.List;
 
-@Service
+//@Service
 public class TransferService {
 
     private final AccountRepository mAccountRepository;
 
-    @Autowired
+    //@Autowired
     public TransferService(AccountRepository _accountRepository) {
         this.mAccountRepository = _accountRepository;
     }
 
-    @Transactional
+    //@Transactional
     public void transferMoney(
             long idSender,
             long idReceiver,
