@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 
-
 /***
  * For this I use Hikari Datasource for JDBC
  */
