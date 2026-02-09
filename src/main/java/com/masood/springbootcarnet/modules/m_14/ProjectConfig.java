@@ -9,7 +9,7 @@ import javax.sql.DataSource;
 /***
  * For this I use Hikari Datasource for JDBC
  */
-@Configuration
+//@Configuration
 public class ProjectConfig {
 
     @Value("${custom.datasource.url}")
