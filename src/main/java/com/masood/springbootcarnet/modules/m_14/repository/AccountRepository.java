@@ -1,4 +1,5 @@
 package com.masood.springbootcarnet.modules.m_14.repository;
+
 import com.masood.springbootcarnet.modules.m_14.model.Account;
 import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jdbc.repository.query.Query;
@@ -19,5 +20,7 @@ public interface AccountRepository extends CrudRepository<Account,Long> {
     @Modifying
     @Query("UPDATE account SET amount = :amount WHERE id = :id")
     void changeAmount(long id, BigDecimal amount);
+
+
 
 }

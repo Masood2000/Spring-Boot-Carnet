@@ -10,13 +10,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+//@Controller
 public class ProductController {
 
 
     private final ProductService mProductService;
 
-    @Autowired
+
+    //@Autowired
     public ProductController(ProductService _productService) {
         this.mProductService = _productService;
     }
