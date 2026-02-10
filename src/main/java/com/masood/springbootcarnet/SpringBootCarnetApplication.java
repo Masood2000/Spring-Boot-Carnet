@@ -11,7 +11,6 @@ public class SpringBootCarnetApplication {
 
     public static void main(String[] args) {
 
-
         SpringApplication.run(SpringBootCarnetApplication.class, args);
 
     }
