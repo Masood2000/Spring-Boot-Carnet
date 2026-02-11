@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 //@Controller
 public class LoginController {
 
-
     private final LoginProcessor mLoginProcessor;
 
     //@Autowired
