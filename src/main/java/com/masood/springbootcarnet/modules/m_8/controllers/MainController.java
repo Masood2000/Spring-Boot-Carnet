@@ -17,7 +17,6 @@ public class MainController {
             @RequestParam(required = false) String nationality,
             Model page) {
 
-
         page.addAttribute("name","masood");
         page.addAttribute("nationality",nationality);
         page.addAttribute("color",color);
