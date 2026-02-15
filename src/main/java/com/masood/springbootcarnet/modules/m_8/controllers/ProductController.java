@@ -21,7 +21,6 @@ public class ProductController {
         this.mProductService = _productService;
     }
 
-
     @GetMapping(path = "/product")
     public String getProducts(Model page) {
 
