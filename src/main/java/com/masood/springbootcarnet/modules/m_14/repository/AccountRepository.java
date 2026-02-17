@@ -21,3 +21,4 @@ public interface AccountRepository extends CrudRepository<Account,Long> {
     void changeAmount(long id, BigDecimal amount);
 
 }
+
