@@ -21,8 +21,6 @@ public class TransferService {
         this.mAccountRepository = _accountRepository;
     }
 
-
-
     //@Transactional
     public void transferMoney(
             long idSender,
