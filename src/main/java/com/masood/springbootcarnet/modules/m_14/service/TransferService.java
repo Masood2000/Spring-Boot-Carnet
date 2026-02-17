@@ -38,7 +38,6 @@ public class TransferService {
     }
 
 
-
     public Iterable<Account> getAllAccounts() {
         return this.mAccountRepository.findAll();
     }
