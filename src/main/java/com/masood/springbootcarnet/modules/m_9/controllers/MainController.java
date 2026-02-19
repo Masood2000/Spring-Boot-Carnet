@@ -20,6 +20,7 @@ public class MainController {
         this.mLoginCountService = loginCountService;
     }
 
+
     @GetMapping("/main")
     public String home(
             @RequestParam(required = false) String logout,
