@@ -34,7 +34,6 @@ public class TransferService {
         this.mAccountRepository.changeAmount(idReceiver, receiverNewAmount);
     }
 
-
     public Iterable<Account> getAllAccounts() {
         return this.mAccountRepository.findAll();
     }
