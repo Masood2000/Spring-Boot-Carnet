@@ -36,7 +36,6 @@ public class LoginProcessor {
             this.mLoginCountSerive.setLoginCount(this.mLoginCountSerive.getLoginCount() + 1);
 
         }
-
         return  loginResult;
     }
 
