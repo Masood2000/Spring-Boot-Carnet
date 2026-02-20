@@ -38,7 +38,6 @@ public class LoginProcessor {
         }
 
         return  loginResult;
-
     }
 
 
