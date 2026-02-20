@@ -55,4 +55,5 @@ public class LoginProcessor {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }
