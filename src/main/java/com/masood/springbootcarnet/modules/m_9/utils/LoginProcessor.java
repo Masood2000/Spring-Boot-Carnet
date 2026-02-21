@@ -39,6 +39,7 @@ public class LoginProcessor {
         return  loginResult;
     }
 
+
     public String getUsername() {
         return username;
     }
