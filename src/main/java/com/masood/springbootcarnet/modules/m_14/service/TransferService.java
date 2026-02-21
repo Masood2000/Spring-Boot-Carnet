@@ -39,5 +39,4 @@ public class TransferService {
         return this.mAccountRepository.findAccountsByName(name);
     }
 
-
 }
