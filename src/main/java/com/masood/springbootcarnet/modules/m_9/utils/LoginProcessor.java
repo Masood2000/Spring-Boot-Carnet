@@ -23,7 +23,6 @@ public class LoginProcessor {
     private String username;
     private String password;
 
-
     public boolean login() {
         String username = this.getUsername();
         String password = this.getPassword();
