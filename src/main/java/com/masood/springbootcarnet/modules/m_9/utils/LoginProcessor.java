@@ -20,7 +20,6 @@ public class LoginProcessor {
     }
 
 
-
     private String username;
     private String password;
 
