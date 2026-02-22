@@ -19,6 +19,8 @@ public class LoginProcessor {
         this.mLoginCountSerive = loginCountSerive;
     }
 
+
+
     private String username;
     private String password;
 
