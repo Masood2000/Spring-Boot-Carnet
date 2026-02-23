@@ -1,9 +1,11 @@
 package com.masood.springbootcarnet.modules.m_14.repository;
 
 import com.masood.springbootcarnet.modules.m_14.model.Account;
-import org.springframework.data.jdbc.repository.query.Modifying;
-import org.springframework.data.jdbc.repository.query.Query;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -13,11 +15,12 @@ import java.util.List;
  */
 public interface AccountRepository extends CrudRepository<Account,Long> {
 
-    @Query("SELECT * FROM account WHERE name = :name")
+    @Query(value = "SELECT * FROM account WHERE name = :name" , nativeQuery = true)
     List<Account> findAccountsByName(String name);
 
     @Modifying
-    @Query("UPDATE account SET amount = :amount WHERE id = :id")
+    @Transactional
+    @Query(value = "UPDATE account SET amount = :amount WHERE id = :id", nativeQuery = true)
     void changeAmount(long id, BigDecimal amount);
 
 }
