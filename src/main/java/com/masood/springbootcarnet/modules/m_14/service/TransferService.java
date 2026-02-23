@@ -22,6 +22,7 @@ public class TransferService {
             long idReceiver,
             BigDecimal amount
     ) {
+
        Account sender = this.mAccountRepository.findById(idSender).orElseThrow(() -> new AccountNotFoundException());
         System.out.println(sender.getId());
         Account receiver = this.mAccountRepository.findById(idReceiver).orElseThrow(() -> new AccountNotFoundException());
@@ -29,6 +30,7 @@ public class TransferService {
         BigDecimal receiverNewAmount = receiver.getAmount().add(amount);
         this.mAccountRepository.changeAmount(idSender, senderNewAmount);
         this.mAccountRepository.changeAmount(idReceiver, receiverNewAmount);
+
     }
 
     public Iterable<Account> getAllAccounts() {
