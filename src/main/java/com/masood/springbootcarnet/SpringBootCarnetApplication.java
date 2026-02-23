@@ -10,7 +10,7 @@ import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
 
 
 @SpringBootApplication(
-        exclude = DataSourceAutoConfiguration.class
+      //  exclude = DataSourceAutoConfiguration.class
 )
 public class SpringBootCarnetApplication {
 
@@ -18,7 +18,7 @@ public class SpringBootCarnetApplication {
 
         SpringApplication.run(SpringBootCarnetApplication.class, args);
 
-        TypeResolver resolver = new TypeResolver();
+       /* TypeResolver resolver = new TypeResolver();
 
         // TEST CASE 1: Standard Match
         // Scenario: $user has doc "User $user"
@@ -29,7 +29,7 @@ public class SpringBootCarnetApplication {
 
         System.out.println("Expected: User");
         System.out.println("Actual:   " + resolver.inferTypeFromDoc(var1));
-        System.out.println();
+        System.out.println();*/
 
 
     }
