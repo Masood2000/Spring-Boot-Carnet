@@ -3,20 +3,24 @@ package com.masood.springbootcarnet.modules.m_14.service;
 import com.masood.springbootcarnet.modules.m_14.exception.AccountNotFoundException;
 import com.masood.springbootcarnet.modules.m_14.model.Account;
 import com.masood.springbootcarnet.modules.m_14.repository.AccountRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.math.BigDecimal;
 import java.util.List;
 
-//@Service
+@Service
 public class TransferService {
 
     private final AccountRepository mAccountRepository;
 
-    //@Autowired
+    @Autowired
     public TransferService(AccountRepository _accountRepository) {
         this.mAccountRepository = _accountRepository;
     }
 
-    //@Transactional
+    @Transactional
     public void transferMoney(
             long idSender,
             long idReceiver,
