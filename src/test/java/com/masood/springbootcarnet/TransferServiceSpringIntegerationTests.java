@@ -43,7 +43,6 @@ public class TransferServiceSpringIntegerationTests {
         when(accountRepository.findById(1L)).thenReturn(Optional.of(sender));
         when(accountRepository.findById(2L)).thenReturn(Optional.of(reciever));
 
-
         transferService.transferMoney(1,2,new BigDecimal(500));
 
         verify(accountRepository).changeAmount(1,new BigDecimal(500));
