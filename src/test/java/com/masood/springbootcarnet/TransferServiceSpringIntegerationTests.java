@@ -40,7 +40,6 @@ public class TransferServiceSpringIntegerationTests {
         verify(accountRepository).changeAmount(1,new BigDecimal(500));
         verify(accountRepository).changeAmount(2,new BigDecimal(1500));
 
-
     }
 
 }
