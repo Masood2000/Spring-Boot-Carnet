@@ -44,7 +44,7 @@ public class LoginController {
         loggedIn = mLoginProcessor.login();
 
         if (loggedIn) {
-            return "redirect:/main";
+            page.addAttribute("message", "You are now logged in.");
         }
         else {
             page.addAttribute("message", "Login failed!");

@@ -1,5 +1,6 @@
 package com.masood.springbootcarnet;
 
+import com.masood.springbootcarnet.modules.m_14.exception.AccountNotFoundException;
 import com.masood.springbootcarnet.modules.m_14.model.Account;
 import com.masood.springbootcarnet.modules.m_14.repository.AccountRepository;
 import com.masood.springbootcarnet.modules.m_14.service.TransferService;
@@ -10,7 +11,12 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import java.math.BigDecimal;
 import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
 
@@ -19,6 +25,7 @@ public class TransferServiceWithAnnotationsUnitTests {
 
     @Mock
     private AccountRepository accountRepository;
+
     @InjectMocks
     private TransferService transferService;
 
@@ -42,4 +49,31 @@ public class TransferServiceWithAnnotationsUnitTests {
         verify(accountRepository).changeAmount(2, new BigDecimal(1100));
 
     }
+
+
+    @Test
+    public void moneyTransferExceptionFlow() {
+
+        Account sender = new Account();
+        Account destination = new Account();
+
+        sender.setId(1L);
+        destination.setId(2L);
+
+        sender.setAmount(new BigDecimal(100));
+        destination.setAmount(new BigDecimal(100L));
+
+
+        given(accountRepository.findById(sender.getId())).willReturn(Optional.of(sender));
+        given(accountRepository.findById(destination.getId())).willReturn(Optional.empty());
+
+
+        assertThrows(AccountNotFoundException.class,()->transferService.transferMoney(sender.getId(),destination.getId(),new BigDecimal(10)));
+
+        verify(accountRepository,never()).changeAmount(anyLong(),any());
+
+    }
+
+
+
 }
