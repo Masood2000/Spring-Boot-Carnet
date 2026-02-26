@@ -9,5 +9,3 @@ package com.masood.springbootcarnet.modules.m_11.seperateapp;
 public class ProjectConfig {
 }*/
 
-
-
