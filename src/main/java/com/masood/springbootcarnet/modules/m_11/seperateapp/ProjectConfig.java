@@ -8,4 +8,3 @@ package com.masood.springbootcarnet.modules.m_11.seperateapp;
 @EnableFeignClients(basePackages = "com.masood.openfiegn")
 public class ProjectConfig {
 }*/
-
