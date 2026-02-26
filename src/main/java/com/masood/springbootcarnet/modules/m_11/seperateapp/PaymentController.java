@@ -22,6 +22,3 @@ public class PaymentController {
         return paymentsProxy.createPayment(requestId, payment);
     }
 }*/
-
-
-
